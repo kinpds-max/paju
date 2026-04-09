@@ -600,13 +600,46 @@
     </div>
 
     <!-- 바닥 종류 Section -->
-    <div style="text-align: center; margin: 80px 0 40px;">
-        <h2 style="font-size: 2.5rem; color: #333; margin-bottom: 15px;">바닥 종류</h2>
-        <p style="color: #888; font-size: 1.1rem; margin-bottom: 30px;">공간별 최적화를 고려한 3가지의 바닥 설계</p>
+    <div style="text-align: center; margin: 120px 0 50px;">
+        <h2 style="font-size: 2.5rem; color: #333; margin-bottom: 10px;">바닥 종류</h2>
+        <p style="color: #888;">공간별 최적화를 고려한 4가지 바닥 설계</p>
     </div>
     
-    <div style="max-width: 1000px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 20px; box-shadow: var(--shadow-sm);">
-        <img src="images/floor_types_full.png" alt="바닥 종류 상세" style="width: 100%; height: auto; display: block;">
+    <div class="bottom-type-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 40px; max-width: 1000px; margin: 0 auto;">
+        <div class="bottom-type-item">
+          <img src="images/t_bottom_embo.png" alt="공기엠보">
+          <h4 style="margin-top: 15px; font-size: 1.1rem;">공기엠보</h4>
+        </div>
+        <div class="bottom-type-item">
+          <img src="images/t_white_line.png" alt="공기라인">
+          <h4 style="margin-top: 15px; font-size: 1.1rem;">공기라인</h4>
+        </div>
+        <div class="bottom-type-item">
+          <img src="images/t_white_line.png" alt="플랫">
+          <h4 style="margin-top: 15px; font-size: 1.1rem;">플랫</h4>
+        </div>
+        <div class="bottom-type-item">
+          <img src="images/t_bottom_embo.png" alt="사각엠보">
+          <h4 style="margin-top: 15px; font-size: 1.1rem;">사각엠보</h4>
+        </div>
+    </div>
+  </section>
+
+  <!-- 시공 추천 사례 -->
+  <section class="section" style="background-color: #f5f5f5; border-top: 1px solid #e0e0e0;">
+    <div style="text-align: center; margin-bottom: 50px;">
+      <h2 style="font-size: 2.2rem; color: #333; margin-bottom: 12px;">시공 추천 사례</h2>
+      <p style="color: #888; font-size: 1.05rem;">실제 시공된 현장 사례를 확인해보세요</p>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto; background: #888; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.12);">
+      <a href="https://blog.naver.com/one19a/224059845489" target="_blank" rel="noopener noreferrer"
+         style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 40px; text-decoration: none; color: #fff; text-align: center; transition: background 0.2s;"
+         onmouseover="this.style.background='rgba(0,0,0,0.15)'" onmouseout="this.style.background='transparent'">
+        <div style="font-size: 3.5rem; margin-bottom: 20px;">📸</div>
+        <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 12px; color: #fff;">시공 추천 사례 보러가기</h3>
+        <p style="font-size: 1rem; color: rgba(255,255,255,0.85); margin-bottom: 28px; line-height: 1.7;">실제 시공 현장의 생생한 사진과 후기를<br>네이버 블로그에서 확인하세요.</p>
+        <span style="display: inline-block; background: #fff; color: #555; font-weight: 700; padding: 14px 36px; border-radius: 50px; font-size: 1rem;">블로그에서 확인하기 →</span>
+      </a>
     </div>
   </section>
 
