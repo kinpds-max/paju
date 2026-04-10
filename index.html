@@ -38,7 +38,7 @@
     <div class="section-title">
       <h2>전례 없는 압도적 할인 혜택</h2>
       <div class="urgent-notice" style="margin-bottom: 40px; text-align: center;">
-        <span style="color: #e74c3c; font-weight: 800; display: block; margin-bottom: 15px; font-size: 1.25rem;">🔥 전쟁여파 원자재 상승으로 부득이하게 이번공구외 인상예정입니다</span>
+        <span style="color: #e74c3c; font-weight: 800; display: block; margin-bottom: 15px; font-size: 1.25rem;">🔥 전쟁여파 원자재 상승으로 부득이하게<br>이번공구외 인상예정입니다</span>
         
         <div class="mobile-optimized-pricing">
           <table id="price-increase-table" style="width: 100%; border-collapse: collapse; font-size: 0.95rem; text-align: center; min-width: 600px;">
@@ -170,7 +170,7 @@
     <div class="calculator-container" style="max-width: 1100px; margin: 0 auto 60px; background: #fff; padding: 40px; border-radius: 30px; box-shadow: var(--shadow-md); border-top: 5px solid var(--prugio-gold);">
       <h3 style="text-align: center; margin-bottom: 30px; color: var(--prugio-green);">✨ 우리 집 실시간 견적 미리보기</h3>
       
-      <div class="grid" style="gap: 20px;">
+      <div class="mobile-half-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
         <div class="form-group">
           <label style="display:block; margin-bottom:10px; font-weight:700;">1. 아파트 평형 선택</label>
           <select id="calc-type" onchange="updateCalc()" style="width:100%; padding:15px; border-radius:10px; border:1px solid #ddd;">
@@ -901,8 +901,8 @@
   <!-- Brochure Slider Section -->
   <section id="about" class="section" style="background-color: #f9f9f9;">
     <div class="section-title">
-      <h2>✨ 하늘매트란? (프리미엄 갤러리)</h2>
-      <p>좌우로 밀거나 화살표를 눌러서 하늘매트의 특장점과 브로셔를 확인하세요</p>
+      <h2>✨ 하늘매트란?<br>(프리미엄 갤러리)</h2>
+      <p>좌우로 밀거나 화살표를 눌러서 하늘매트의 특장점과<br>브로셔를 확인하세요.</p>
     </div>
     
     <div class="swiper brochure-swiper" style="max-width: 800px; margin: 0 auto; padding-bottom: 50px; position: relative;">
@@ -964,7 +964,11 @@
 
       // 2. Specific IDs
       if (document.getElementById('hero-main-title')) {
-        document.getElementById('hero-main-title').innerHTML = `${config.apartmentName}<br><span>${config.partnerStatus}</span>`;
+        // "파주" 글자부터 아래줄맞춤 반영
+        const splitName = config.apartmentName.split(' ');
+        const firstName = splitName[0]; // "파주"
+        const restName = splitName.slice(1).join(' '); // "푸르지오 더스마트"
+        document.getElementById('hero-main-title').innerHTML = `${firstName}<br>${restName}<br><span>${config.partnerStatus}</span>`;
       }
       if (document.getElementById('apt-policy-desc')) {
         document.getElementById('apt-policy-desc').textContent = `${config.apartmentName} 입주민분들을 위한 '짝꿍공구' + '후기 2곳 현금할인' 중복 적용`;
@@ -1262,8 +1266,8 @@
     .fab { width: 50px; height: 50px; }
     .music-icon { font-size: 18px; }
 
-    /* Benefit Grid Mobile */
-    .benefit-grid { grid-template-columns: 1fr !important; }
+    /* Benefit Grid Mobile: 2줄 2개씩 */
+    .benefit-grid { grid-template-columns: repeat(2, 1fr) !important; }
   }
 
   /* Desktop Grid */
