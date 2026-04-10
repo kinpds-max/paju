@@ -516,18 +516,161 @@ footer {
 }
 
 /* Mobile Responsive */
+@media (max-width: 992px) {
+  .estimate-grid {
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+  
+  .plan-image {
+    height: 220px;
+  }
+}
+
 @media (max-width: 768px) {
   header {
     padding: 15px 20px;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
   }
+  
+  header.scrolled {
+    padding: 10px 20px;
+  }
+
+  .menu-toggle {
+    display: block !important;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  nav.active {
+    display: block;
+    animation: fadeInDown 0.3s ease;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+  
+  .sub-logo {
+    font-size: 1rem;
+  }
+
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+
   .section {
     padding: 60px 20px;
   }
-  .texture-showcase {
-    flex-direction: column;
-    padding: 30px;
+
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .calculator-container {
+    padding: 25px 15px !important;
+  }
+
+  .size-selector-row {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .calc-result {
+    padding: 20px 15px !important;
+  }
+
+  .price-container {
+    margin: 0 -10px;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  th, td {
+    padding: 12px 8px;
+  }
+
+  .tab-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .plan-details h4 {
+    font-size: 1.4rem;
+  }
+  
+  .bottom-type-grid {
+    gap: 15px;
+  }
+  
+  .bottom-type-item img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .size-selector-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .price-tag {
+    font-size: 1rem;
+  }
+  
+  .btn-primary {
+    padding: 12px 30px;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  #price-breakdown {
+    font-size: 0.9rem;
+  }
+  
+  #price-breakdown .final-total-row {
+    font-size: 1.2rem;
   }
 }

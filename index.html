@@ -6,20 +6,22 @@
   <title>하늘매트 공동구매 안내</title>
   <meta name="description" id="meta-desc" content="입주민 전용 하늘매트 층간소음매트 최대 할인 혜택 및 타입별 수량/가격 정찰제 안내">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
   <header id="header">
-    <a href="#" class="logo">하늘매트 <span class="sub-logo">공구할인 제안서</span></a>
-    <nav>
+    <a href="#" class="logo">하늘매트 <span class="sub-logo">공동구매 VIP 제안서</span></a>
+    <div class="menu-toggle" onclick="toggleMenu()" style="display: none; cursor: pointer; font-size: 1.5rem; color: var(--prugio-green);">☰</div>
+    <nav id="nav">
       <ul>
-        <li><a href="#about">하늘매트란?</a></li>
-        <li><a href="#features">제품특징</a></li>
-        <li><a href="#pricing-policy">할인정책</a></li>
-        <li><a href="#estimates">타입별 견적</a></li>
-        <li><a href="#usage-guide">주의사항</a></li>
-        <li><a href="#textures">제품 라인업</a></li>
-        <li><a href="#benefits">공구혜택</a></li>
+        <li><a href="#about" onclick="closeMenu()">하늘매트란?</a></li>
+        <li><a href="#features" onclick="closeMenu()">제품특징</a></li>
+        <li><a href="#pricing-policy" onclick="closeMenu()">할인정책</a></li>
+        <li><a href="#estimates" onclick="closeMenu()">타입별 견적</a></li>
+        <li><a href="#usage-guide" onclick="closeMenu()">주의사항</a></li>
+        <li><a href="#textures" onclick="closeMenu()">제품 라인업</a></li>
+        <li><a href="#benefits" onclick="closeMenu()">공구혜택</a></li>
       </ul>
     </nav>
   </header>
@@ -31,48 +33,67 @@
     <a href="#estimates" class="btn-primary">우리 집 상세 견적 확인하기</a>
   </section>
 
-  <!-- Product Features Section -->
-  <section id="features" class="section" style="background-color: #f9f9f9;">
-    <div class="section-title">
-      <h2>Haneul Mat Premium Gallery</h2>
-    </div>
-    
-    <div style="display: flex; flex-direction: column; gap: 40px; align-items: center; max-width: 1100px; margin: 0 auto;">
-      <!-- Child Face Image (First Page) -->
-      <img src="images/KakaoTalk_20260102_094256682.png" alt="하늘매트 소개" class="pamphlet-img" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 20px; box-shadow: var(--shadow-md);">
-
-      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; width: 100%;">
-        <img src="images/KakaoTalk_20260102_094256682_02.png" alt="특징02" class="pamphlet-img" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; box-shadow: var(--shadow-sm);">
-        <img src="images/KakaoTalk_20260102_094256682_03.png" alt="특징03" class="pamphlet-img" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; box-shadow: var(--shadow-sm);">
-        <img src="images/KakaoTalk_20260102_094256682_04.png" alt="특징04" class="pamphlet-img" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; box-shadow: var(--shadow-sm);">
-        <img src="images/KakaoTalk_20260102_094256682_05.png" alt="특징05" class="pamphlet-img" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; box-shadow: var(--shadow-sm);">
-        <img src="images/KakaoTalk_20260102_094256682_06.png" alt="특징06" class="pamphlet-img" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; box-shadow: var(--shadow-sm);">
-        <img src="images/KakaoTalk_20260102_094256682_07.png" alt="특징07" class="pamphlet-img" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; box-shadow: var(--shadow-sm);">
-        <img src="images/KakaoTalk_20260102_094256682_08.png" alt="특징08" class="pamphlet-img" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; box-shadow: var(--shadow-sm);">
-        <img src="images/KakaoTalk_20260102_094256682_09.png" alt="특징09" class="pamphlet-img" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; box-shadow: var(--shadow-sm);">
-        <img src="images/KakaoTalk_20260102_094256682_10.png" alt="특징10" class="pamphlet-img" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; box-shadow: var(--shadow-sm);">
-        <!-- Blue Conclusion Image -->
-        <img src="images/KakaoTalk_20260102_094256682_11.png" alt="특징11" class="pamphlet-img" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; box-shadow: var(--shadow-sm);">
-      </div>
-    </div>
-  </section>
 
   <section id="pricing-policy" class="section">
     <div class="section-title">
       <h2>전례 없는 압도적 할인 혜택</h2>
-      <p id="apt-policy-desc">입주민분들을 위한 '짝꿍공구' + '후기 2곳 현금할인' <strong>특별 동시 중복 적용</strong></p>
+      <div class="urgent-notice" style="margin-bottom: 40px; text-align: center;">
+        <span style="color: #e74c3c; font-weight: 800; display: block; margin-bottom: 15px; font-size: 1.25rem;">🔥 전쟁여파 원자재 상승으로 부득이하게 이번공구외 인상예정입니다</span>
+        
+        <div style="background: #fff; padding: 25px; border-radius: 20px; border: 2px solid #ffcfcf; margin: 20px auto; overflow-x: auto; max-width: 950px; box-shadow: 0 10px 30px rgba(231, 76, 60, 0.08);">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; text-align: center; min-width: 600px;">
+            <thead>
+              <tr style="background: #004433; color: #ffffff;">
+                <th style="padding: 15px; border-right: 1px solid rgba(255,255,255,0.1); width: 160px; text-align: center;">인상 예정 구분</th>
+                <th style="padding: 15px; border-right: 1px solid rgba(255,255,255,0.1); text-align: center;">600각</th>
+                <th style="padding: 15px; border-right: 1px solid rgba(255,255,255,0.1); text-align: center;">600레더</th>
+                <th style="padding: 15px; border-right: 1px solid rgba(255,255,255,0.1); text-align: center;">800각</th>
+                <th style="padding: 15px; border-right: 1px solid rgba(255,255,255,0.1); text-align: center;">800레더</th>
+                <th style="padding: 15px; border-right: 1px solid rgba(255,255,255,0.1); text-align: center;">1000각</th>
+                <th style="padding: 15px; text-align: center;">1200각</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 15px; border-right: 1px solid #eee; font-weight: 700; background: #f9fbfb; color: #333; text-align: center;">기본단가(예정)</td>
+                <td style="padding: 15px; border-right: 1px solid #eee; color: #c0392b; font-weight: 700; text-align: center;">3만</td>
+                <td style="padding: 15px; border-right: 1px solid #eee; color: #c0392b; font-weight: 700; text-align: center;">3.4만</td>
+                <td style="padding: 15px; border-right: 1px solid #eee; color: #c0392b; font-weight: 700; text-align: center;">8.3만</td>
+                <td style="padding: 15px; border-right: 1px solid #eee; color: #c0392b; font-weight: 700; text-align: center;">9.3만</td>
+                <td style="padding: 15px; border-right: 1px solid #eee; color: #c0392b; font-weight: 700; text-align: center;">13.5만</td>
+                <td style="padding: 15px; color: #c0392b; font-weight: 700; text-align: center;">20만</td>
+              </tr>
+              <tr>
+                <td style="padding: 15px; border-right: 1px solid #eee; font-weight: 700; background: #f9fbfb; color: #333; text-align: center;">공구단가(예정)</td>
+                <td style="padding: 15px; border-right: 1px solid #eee; font-weight: 700; color: #333; text-align: center;">2.6만</td>
+                <td style="padding: 15px; border-right: 1px solid #eee; font-weight: 700; color: #333; text-align: center;">3.0만</td>
+                <td style="padding: 15px; border-right: 1px solid #eee; font-weight: 700; color: #333; text-align: center;">4.9만</td>
+                <td style="padding: 15px; border-right: 1px solid #eee; font-weight: 700; color: #333; text-align: center;">6.2만</td>
+                <td style="padding: 15px; border-right: 1px solid #eee; font-weight: 700; color: #333; text-align: center;">9.9만</td>
+                <td style="padding: 15px; font-weight: 700; color: #333; text-align: center;">15만</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size: 0.85rem; color: #999; margin-top: 15px; font-style: italic;">* 이번 공동구매 종료 후 전국적으로 적용될 인상 예정안입니다.</p>
+        </div>
+      </div>
+      <p id="apt-policy-desc" style="font-size: 1.1rem; line-height: 1.6; margin-top: 40px; margin-bottom: 30px;">
+        <span class="apt-name-text"></span> 입주민분들을 위한 '짝꿍공구' + '후기 2곳 현금할인' <strong>특별 동시 중복 적용</strong>
+      </p>
     </div>
 
-    <div class="size-comparison">
-      <h3 style="margin-bottom: 30px; color: var(--prugio-green); text-align: center;">공동구매 공식 판매가 안내</h3>
+    <div class="size-comparison" style="margin-top: 20px;">
+      <div style="font-size: 1.15rem; font-weight: 700; color: var(--prugio-green); text-align: center; margin-bottom: 15px;">공동구매 공식 판매가 안내</div>
       <div class="price-container">
         <table>
           <thead>
             <tr>
-              <th>매트 규격</th>
-              <th>기초 단가</th>
-              <th>공동구매가</th>
-              <th style="background: var(--prugio-gold);">최대 혜택가 (10인 이상 짝꿍 진행)</th>
+              <th style="text-align: center;">매트 규격</th>
+              <th style="text-align: center;">기초 단가</th>
+              <th style="text-align: center;">공동구매가</th>
+              <th style="background: #b08e50; text-align: center;">10인↑ 짝꿍 (-2,000)</th>
+              <th style="background: #b08e50; text-align: center;">후기현금 (-1,000)</th>
+              <th style="background: #9a7b41; text-align: center;">최대 혜택가</th>
             </tr>
           </thead>
           <tbody>
@@ -80,37 +101,49 @@
               <td><strong>600 mm (오리지널)</strong></td>
               <td>29,000원</td>
               <td>25,000원</td>
-              <td style="font-weight: 700; color: var(--prugio-green);">22,000원</td>
+              <td style="text-align: center; color: #e67e22;">-2,000원</td>
+              <td style="text-align: center; color: #e67e22;">-1,000원</td>
+              <td style="font-weight: 700; color: var(--prugio-green); text-align: center;">22,000원</td>
             </tr>
             <tr style="background-color: #f9fbfb;">
               <td><strong>600 mm <span class="badge" style="background:#e67e22; margin:0;">LEATHER</span></strong></td>
               <td>33,000원</td>
               <td>29,000원</td>
-              <td style="font-weight: 700; color: var(--prugio-green);">26,000원</td>
+              <td style="text-align: center; color: #e67e22;">-2,000원</td>
+              <td style="text-align: center; color: #e67e22;">-1,000원</td>
+              <td style="font-weight: 700; color: var(--prugio-green); text-align: center;">26,000원</td>
             </tr>
             <tr class="highlight-row">
               <td><strong>800 mm <span class="badge" style="margin:0;">BEST</span></strong></td>
               <td>80,000원</td>
               <td>47,000원</td>
-              <td style="font-weight: 700; color: var(--prugio-green);">44,000원</td>
+              <td style="text-align: center; color: #e67e22;">-2,000원</td>
+              <td style="text-align: center; color: #e67e22;">-1,000원</td>
+              <td style="font-weight: 700; color: var(--prugio-green); text-align: center;">44,000원</td>
             </tr>
             <tr>
               <td><strong>800 mm <span class="badge" style="background:#e67e22; margin:0;">LEATHER</span></strong></td>
               <td>90,000원</td>
               <td>60,000원</td>
-              <td style="font-weight: 700; color: var(--prugio-green);">57,000원</td>
+              <td style="text-align: center; color: #e67e22;">-2,000원</td>
+              <td style="text-align: center; color: #e67e22;">-1,000원</td>
+              <td style="font-weight: 700; color: var(--prugio-green); text-align: center;">57,000원</td>
             </tr>
             <tr style="background-color: #f9fbfb;">
               <td><strong>1000 mm <span class="badge" style="background:#2980b9; margin:0;">PREMIUM</span></strong></td>
               <td>130,000원</td>
               <td>95,000원</td>
-              <td style="font-weight: 700; color: var(--prugio-green);">92,000원</td>
+              <td style="text-align: center; color: #e67e22;">-2,000원</td>
+              <td style="text-align: center; color: #e67e22;">-1,000원</td>
+              <td style="font-weight: 700; color: var(--prugio-green); text-align: center;">92,000원</td>
             </tr>
             <tr>
               <td><strong>1200 mm <span class="badge" style="background:#2c3e50; margin:0;">KING</span></strong></td>
               <td>200,000원</td>
               <td>150,000원</td>
-              <td style="font-weight: 700; color: var(--prugio-green);">147,000원</td>
+              <td style="text-align: center; color: #e67e22;">-2,000원</td>
+              <td style="text-align: center; color: #e67e22;">-1,000원</td>
+              <td style="font-weight: 700; color: var(--prugio-green); text-align: center;">147,000원</td>
             </tr>
           </tbody>
         </table>
@@ -120,7 +153,8 @@
           <strong>💡 할인 산정 기준:</strong><br>
           • <strong>공동구매가:</strong> 입주민 기본 할인 적용 가격<br>
           • <strong>최대 혜택가 (10인 이상 짝꿍 진행):</strong> 공구가 - [짝꿍 10인동시 (2,000) + 후기현금 1,000] <strong>특별 동시적용 시</strong><br>
-          • <strong>안내:</strong> 짝꿍(10인 기준 2천원) 및 후기할인(1천원)은 강력한 중복 혜택으로 제공됩니다.
+          • <strong>안내:</strong> 짝꿍(10인 기준 2천원) 및 후기할인(1천원)은 강력한 중복 혜택으로 제공됩니다.<br>
+          <span style="color: #e67e22;">• <strong>중복 불가:</strong> 본 짝꿍 이벤트와 기타 우대 혜택(다자녀/한부모/장애인 등)은 중복 적용이 되지 않습니다.</span>
         </p>
       </div>
     </div>
@@ -136,13 +170,16 @@
     <div class="calculator-container" style="max-width: 1100px; margin: 0 auto 60px; background: #fff; padding: 40px; border-radius: 30px; box-shadow: var(--shadow-md); border-top: 5px solid var(--prugio-gold);">
       <h3 style="text-align: center; margin-bottom: 30px; color: var(--prugio-green);">✨ 우리 집 실시간 견적 미리보기</h3>
       
-      <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 20px;">
+      <div class="grid" style="gap: 20px;">
         <div class="form-group">
           <label style="display:block; margin-bottom:10px; font-weight:700;">1. 아파트 평형 선택</label>
           <select id="calc-type" onchange="updateCalc()" style="width:100%; padding:15px; border-radius:10px; border:1px solid #ddd;">
             <option value="59A">59A 타입</option>
+            <option value="59B">59B 타입</option>
+            <option value="59C">59C 타입</option>
             <option value="79A">79A 타입</option>
             <option value="79C">79C 타입</option>
+            <option value="79E">79E 타입</option>
             <option value="84A">84A 타입</option>
           </select>
         </div>
@@ -151,7 +188,12 @@
           <select id="calc-area" onchange="updateCalc()" style="width:100%; padding:15px; border-radius:10px; border:1px solid #ddd;">
              <option value="total">전체 (거실+복도+주방 / 최소)</option>
              <option value="living_hall">거실+복도 (최소)</option>
+             <option value="living_kitchen">거실+주방 (59B 추천)</option>
              <option value="living">거실만 (최소)</option>
+             <option value="room1">침실1 (안방)</option>
+             <option value="room2">침실2</option>
+             <option value="room3">침실3</option>
+             <option value="room4">알파룸 (84A 전용)</option>
           </select>
           <p style="font-size: 0.8rem; color: #888; margin-top: 8px;">* 현장 실측 및 재단 로스에 의해 <strong style="color:#e67e22;">+10장 내외</strong>의 추가 수량이 발생할 수 있습니다.</p>
         </div>
@@ -184,7 +226,7 @@
             <span>특별 중복 할인 (짝꿍+후기)</span>
             <span id="discount-total">-0원</span>
           </div>
-          <div style="display:flex; justify-content: space-between; margin-top: 15px; padding-top: 15px; border-top: 2px solid #333; font-weight: 900; font-size: 1.4rem; color: var(--prugio-green);">
+          <div class="final-total-row" style="display:flex; justify-content: space-between; margin-top: 15px; padding-top: 15px; border-top: 2px solid #333; font-weight: 900; font-size: 1.4rem; color: var(--prugio-green);">
             <span>최종 예상가</span>
             <span id="final-total">0원</span>
           </div>
@@ -196,8 +238,11 @@
     <div class="tab-container">
       <div class="tabs">
         <button class="tab-btn active" onclick="openTab(event, 'type59A')">59A</button>
+        <button class="tab-btn" onclick="openTab(event, 'type59B')">59B</button>
+        <button class="tab-btn" onclick="openTab(event, 'type59C')">59C</button>
         <button class="tab-btn" onclick="openTab(event, 'type79A')">79A</button>
         <button class="tab-btn" onclick="openTab(event, 'type79C')">79C</button>
+        <button class="tab-btn" onclick="openTab(event, 'type79E')">79E</button>
         <button class="tab-btn" onclick="openTab(event, 'type84A')">84A</button>
       </div>
 
@@ -209,9 +254,18 @@
               <span class="visual-label">2D 평면도</span>
               <img src="images/59A.png" alt="59A 평면도">
             </div>
-            <div class="plan-image view-3d cropped">
-              <span class="visual-label">3D 입체도면</span>
-              <img src="images/3d_59a.png" alt="59A 3D도면">
+            <div class="plan-image view-3d cropped" style="height: auto;">
+              <span class="visual-label">컴퓨터 분석 매트 배치 설계 (600각 기준)</span>
+              <div class="sketch-compare-container">
+                <div class="cad-grid-simulation">
+                  <div class="mat-grid-lines">
+                    <div class="cad-label">SCALE: 1/50 | AUTOCAD QUANTITY: 75ea</div>
+                    <div style="position:absolute; top:20px; left:20px; background:rgba(0,68,51,0.1); width:100px; height:35px; border:1px dashed #004433; display:flex; align-items:center; justify-content:center; font-size:0.6rem;">MAIN LIVING</div>
+                    <div style="position:absolute; bottom:20px; right:20px; background:rgba(0,68,51,0.05); width:80px; height:25px; border:1px dashed #004433; display:flex; align-items:center; justify-content:center; font-size:0.55rem;">ENTRANCE</div>
+                  </div>
+                </div>
+                <img src="images/3d_cad_sketch_59a.png" alt="59A 매트배치" class="sketch-layer mat-overlay">
+              </div>
             </div>
           </div>
           <div class="plan-details">
@@ -250,6 +304,214 @@
                     <td><strong>27장</strong></td>
                     <td><strong>19장</strong></td>
                   </tr>
+                  <tr>
+                    <td>침실1(안방)</td>
+                    <td>25장</td>
+                    <td>14장</td>
+                    <td>9장</td>
+                    <td>7장</td>
+                  </tr>
+                  <tr>
+                    <td>침실2</td>
+                    <td>20장</td>
+                    <td>12장</td>
+                    <td>8장</td>
+                    <td>5장</td>
+                  </tr>
+                  <tr>
+                    <td>침실3</td>
+                    <td>22장</td>
+                    <td>13장</td>
+                    <td>8장</td>
+                    <td>6장</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 59B -->
+      <div id="type59B" class="tab-content">
+        <div class="estimate-grid">
+          <div class="plan-visuals">
+            <div class="plan-image cropped">
+              <span class="visual-label">단지 평면도</span>
+              <img src="images/59B.png" alt="59B 평면도">
+            </div>
+            <div class="plan-image view-3d cropped" style="height: auto;">
+              <span class="visual-label">컴퓨터 분석 매트 배치 설계 (600각 기준)</span>
+              <div class="sketch-compare-container">
+                <div class="cad-grid-simulation">
+                  <div class="mat-grid-lines">
+                    <div class="cad-label">SCALE: 1/50 | AUTOCAD QUANTITY: 85ea</div>
+                    <div style="position:absolute; top:10px; left:10px; background:rgba(0,68,51,0.1); width:90px; height:30px; border:1px dashed #004433; display:flex; align-items:center; justify-content:center; font-size:0.55rem;">LIVING ROOM</div>
+                    <div style="position:absolute; top:45px; left:10px; background:rgba(0,68,51,0.05); width:80px; height:25px; border:1px dashed #004433; display:flex; align-items:center; justify-content:center; font-size:0.55rem;">KITCHEN</div>
+                    <div style="position:absolute; top:10px; right:10px; background:rgba(0,68,51,0.05); width:60px; height:25px; border:1px dashed #004433; display:flex; align-items:center; justify-content:center; font-size:0.55rem;">HALLWAY</div>
+                  </div>
+                </div>
+                <img src="images/3d_cad_sketch_59b.png" alt="59B 매트배치" class="sketch-layer mat-overlay">
+              </div>
+            </div>
+          </div>
+          <div class="plan-details">
+            <span class="badge">Versatile Space</span>
+            <h4>59B 타입 예상 수량</h4>
+            <div class="price-container">
+              <table style="font-size: 0.9rem;">
+                <thead>
+                  <tr>
+                    <th>시공 구역</th>
+                    <th>600각</th>
+                    <th>800각</th>
+                    <th>1000각</th>
+                    <th>1200각</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>거실</td>
+                    <td>45장</td>
+                    <td>26장</td>
+                    <td>17장</td>
+                    <td>12장</td>
+                  </tr>
+                  <tr>
+                    <td>주방</td>
+                    <td>20장</td>
+                    <td>12장</td>
+                    <td>8장</td>
+                    <td>5장</td>
+                  </tr>
+                  <tr>
+                    <td>거실+주방</td>
+                    <td>65장</td>
+                    <td>37장</td>
+                    <td>24장</td>
+                    <td>17장</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td><strong>거+주+복도(전체)</strong></td>
+                    <td><strong>85장</strong></td>
+                    <td><strong>48장</strong></td>
+                    <td><strong>31장</strong></td>
+                    <td><strong>22장</strong></td>
+                  </tr>
+                  <tr>
+                    <td>침실1(안방)</td>
+                    <td>28장</td>
+                    <td>16장</td>
+                    <td>11장</td>
+                    <td>7장</td>
+                  </tr>
+                  <tr>
+                    <td>침실2</td>
+                    <td>22장</td>
+                    <td>13장</td>
+                    <td>8장</td>
+                    <td>6장</td>
+                  </tr>
+                  <tr>
+                    <td>침실3</td>
+                    <td>26장</td>
+                    <td>15장</td>
+                    <td>10장</td>
+                    <td>7장</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 59C -->
+      <div id="type59C" class="tab-content">
+        <div class="estimate-grid">
+          <div class="plan-visuals">
+            <div class="plan-image cropped">
+              <span class="visual-label">단지 평면도</span>
+              <img src="images/59C.png" alt="59C 평면도">
+            </div>
+            <div class="plan-image view-3d cropped" style="height: auto;">
+              <span class="visual-label">컴퓨터 분석 매트 배치 설계 (600각 기준)</span>
+              <div class="sketch-compare-container">
+                <div class="cad-grid-simulation">
+                  <div class="mat-grid-lines">
+                    <div class="cad-label">SCALE: 1/50 | AUTOCAD QUANTITY: 75ea</div>
+                    <div style="position:absolute; bottom:50px; left:15px; background:rgba(0,68,51,0.1); width:110px; height:35px; border:1px dashed #004433; display:flex; align-items:center; justify-content:center; font-size:0.6rem;">INTEGRATED LIVING</div>
+                    <div style="position:absolute; top:15px; right:15px; background:rgba(0,68,51,0.05); width:80px; height:30px; border:1px dashed #004433; display:flex; align-items:center; justify-content:center; font-size:0.6rem;">REST AREA</div>
+                  </div>
+                </div>
+                <img src="images/3d_sketch_59c.png" alt="59C 매트배치" class="sketch-layer mat-overlay">
+              </div>
+            </div>
+          </div>
+          <div class="plan-details">
+            <span class="badge">Compact Living</span>
+            <h4>59C 타입 예상 수량</h4>
+            <div class="price-container">
+              <table style="font-size: 0.9rem;">
+                <thead>
+                  <tr>
+                    <th>시공 구역</th>
+                    <th>600각</th>
+                    <th>800각</th>
+                    <th>1000각</th>
+                    <th>1200각</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>거실</td>
+                    <td>35장</td>
+                    <td>20장</td>
+                    <td>13장</td>
+                    <td>9장</td>
+                  </tr>
+                  <tr>
+                    <td>주방</td>
+                    <td>20장</td>
+                    <td>12장</td>
+                    <td>8장</td>
+                    <td>5장</td>
+                  </tr>
+                  <tr>
+                    <td>거실+복도</td>
+                    <td>60장</td>
+                    <td>34장</td>
+                    <td>22장</td>
+                    <td>15장</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td><strong>거+주+복도(전체)</strong></td>
+                    <td><strong>75장</strong></td>
+                    <td><strong>42장</strong></td>
+                    <td><strong>27장</strong></td>
+                    <td><strong>19장</strong></td>
+                  </tr>
+                  <tr>
+                    <td>침실1(안방)</td>
+                    <td>30장</td>
+                    <td>17장</td>
+                    <td>11장</td>
+                    <td>8장</td>
+                  </tr>
+                  <tr>
+                    <td>침실2</td>
+                    <td>21장</td>
+                    <td>12장</td>
+                    <td>8장</td>
+                    <td>6장</td>
+                  </tr>
+                  <tr>
+                    <td>침실3</td>
+                    <td>24장</td>
+                    <td>14장</td>
+                    <td>9장</td>
+                    <td>6장</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -265,9 +527,17 @@
               <span class="visual-label">2D 평면도</span>
               <img src="images/79A.png" alt="79A 평면도">
             </div>
-            <div class="plan-image view-3d cropped">
-              <span class="visual-label">3D 입체도면</span>
-              <img src="images/3d_79a.png" alt="79A 3D도면">
+            <div class="plan-image view-3d cropped" style="height: auto;">
+              <span class="visual-label">컴퓨터 분석 매트 배치 설계 (600각 기준)</span>
+              <div class="sketch-compare-container">
+                <div class="cad-grid-simulation">
+                  <div class="mat-grid-lines">
+                    <div class="cad-label">SCALE: 1/50 | AUTOCAD QUANTITY: 110ea</div>
+                    <div style="position:absolute; top:10px; left:10px; background:rgba(0,68,51,0.1); width:100px; height:40px; border:1px dashed #004433; display:flex; align-items:center; justify-content:center; font-size:0.6rem;">79A LARGE GRID</div>
+                  </div>
+                </div>
+                <img src="images/3d_sketch_large.png" alt="79A 매트배치" class="sketch-layer mat-overlay">
+              </div>
             </div>
           </div>
           <div class="plan-details">
@@ -335,9 +605,17 @@
               <span class="visual-label">2D 평면도</span>
               <img src="images/79C.png" alt="79C 평면도">
             </div>
-            <div class="plan-image view-3d cropped">
-              <span class="visual-label">3D 입체도면</span>
-              <img src="images/3d_79c.png" alt="79C 3D도면">
+            <div class="plan-image view-3d cropped" style="height: auto;">
+              <span class="visual-label">컴퓨터 분석 매트 배치 설계 (600각 기준)</span>
+              <div class="sketch-compare-container">
+                <div class="cad-grid-simulation">
+                  <div class="mat-grid-lines">
+                    <div class="cad-label">SCALE: 1/50 | AUTOCAD QUANTITY: 110ea</div>
+                    <div style="position:absolute; top:10px; left:10px; background:rgba(0,68,51,0.1); width:100px; height:40px; border:1px dashed #004433; display:flex; align-items:center; justify-content:center; font-size:0.6rem;">79C GRID ANALYZE</div>
+                  </div>
+                </div>
+                <img src="images/3d_sketch_large.png" alt="79C 매트배치" class="sketch-layer mat-overlay">
+              </div>
             </div>
           </div>
           <div class="plan-details">
@@ -397,6 +675,90 @@
         </div>
       </div>
 
+      <!-- 79E -->
+      <div id="type79E" class="tab-content">
+        <div class="estimate-grid">
+          <div class="plan-visuals">
+            <div class="plan-image cropped">
+              <span class="visual-label">단지 평면도</span>
+              <img src="images/79E.png" alt="79E 평면도">
+            </div>
+            <div class="plan-image view-3d cropped">
+              <span class="visual-label">매트 예상 스케치</span>
+              <img src="images/3d_cad_sketch_large.png" alt="79E 매트스케치">
+            </div>
+          </div>
+          <div class="plan-details">
+            <span class="badge">Premium Living</span>
+            <h4>79E 타입 예상 수량</h4>
+            <div class="price-container">
+              <table style="font-size: 0.9rem;">
+                <thead>
+                  <tr>
+                    <th>시공 구역</th>
+                    <th>600각</th>
+                    <th>800각</th>
+                    <th>1000각</th>
+                    <th>1200각</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>거실</td>
+                    <td>50장</td>
+                    <td>28장</td>
+                    <td>18장</td>
+                    <td>13장</td>
+                  </tr>
+                  <tr>
+                    <td>주방</td>
+                    <td>20장</td>
+                    <td>12장</td>
+                    <td>8장</td>
+                    <td>5장</td>
+                  </tr>
+                  <tr>
+                    <td>거실+복도</td>
+                    <td>95장</td>
+                    <td>54장</td>
+                    <td>35장</td>
+                    <td>24장</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td><strong>거+주+복도(전체)</strong></td>
+                    <td><strong>115장</strong></td>
+                    <td><strong>65장</strong></td>
+                    <td><strong>42장</strong></td>
+                    <td><strong>29장</strong></td>
+                  </tr>
+                  <tr>
+                    <td>침실1(안방)</td>
+                    <td>33장</td>
+                    <td>19장</td>
+                    <td>12장</td>
+                    <td>9장</td>
+                  </tr>
+                  <tr>
+                    <td>침실2</td>
+                    <td>24장</td>
+                    <td>14장</td>
+                    <td>9장</td>
+                    <td>6장</td>
+                  </tr>
+                  <tr>
+                    <td>침실3</td>
+                    <td>27장</td>
+                    <td>16장</td>
+                    <td>10장</td>
+                    <td>7장</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- 84A -->
       <div id="type84A" class="tab-content">
         <div class="estimate-grid">
@@ -405,9 +767,18 @@
               <span class="visual-label">2D 평면도</span>
               <img src="images/84A.png" alt="84A 평면도">
             </div>
-            <div class="plan-image view-3d cropped">
-              <span class="visual-label">3D 입체도면</span>
-              <img src="images/3d_84a.png" alt="84A 3D도면">
+            <div class="plan-image view-3d cropped" style="height: auto;">
+              <span class="visual-label">컴퓨터 분석 매트 배치 설계 (600각 기준)</span>
+              <div class="sketch-compare-container">
+                <div class="cad-grid-simulation">
+                  <div class="mat-grid-lines">
+                    <div class="cad-label">SCALE: 1/50 | AUTOCAD QUANTITY: 110ea</div>
+                    <div style="position:absolute; top:20px; left:20px; background:rgba(0,68,51,0.1); width:110px; height:35px; border:1px dashed #004433; display:flex; align-items:center; justify-content:center; font-size:0.6rem;">84A MAIN ZONE</div>
+                    <div style="position:absolute; top:65px; left:20px; background:rgba(0,68,51,0.05); width:110px; height:30px; border:1px dashed #004433; display:flex; align-items:center; justify-content:center; font-size:0.55rem;">ALPHA+KITCHEN</div>
+                  </div>
+                </div>
+                <img src="images/3d_sketch_large.png" alt="84A 매트배치" class="sketch-layer mat-overlay">
+              </div>
             </div>
           </div>
           <div class="plan-details">
@@ -483,7 +854,7 @@
     <!-- Recommendation Section (Previously Top Recommendations) -->
     <div style="max-width: 1100px; margin: 0 auto 80px auto;">
         <h3 style="text-align: center; margin-bottom: 40px; font-size: 1.8rem; color: #333;">⭐ BEST SELLER</h3>
-        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 40px;">
+        <div class="grid" style="gap: 40px;">
             <div class="texture-item" style="border: 2px solid var(--prugio-gold);">
                 <span class="best-badge" style="background:#3498db;">BEST</span>
                 <div class="texture-info-small" style="padding: 25px;">
@@ -533,7 +904,7 @@
       <p>매트를 더 오래, 깨끗하게 사용하기 위해 반드시 확인해주세요.</p>
     </div>
 
-    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 40px; text-align: left;">
+    <div class="grid" style="gap: 40px; text-align: left;">
       <!-- Management Guide -->
       <div style="background: var(--bg-light); padding: 40px; border-radius: 20px; box-shadow: var(--shadow-sm); border-left: 5px solid var(--prugio-gold);">
         <h3 style="margin-bottom: 25px; color: var(--prugio-green);">📑 매트 관리 핵심 가이딩</h3>
@@ -573,30 +944,59 @@
       <h2 style="color: #fff;">공동구매 선착순 특별 혜택</h2>
       <p style="color: rgba(255,255,255,0.7);"><span class="apt-name-text"></span> 입주민만을 위한 특별한 선물</p>
     </div>
-    <div class="grid" style="display: flex; gap: 15px; flex-wrap: wrap;">
-      <div class="card" style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.1); border: 1px solid var(--prugio-gold); color: #fff;">
-        <h3 style="color: var(--prugio-gold);">짝꿍공구할인</h3>
-        <p style="font-size: 0.85rem; line-height: 1.6;">
+    <div class="grid benefit-grid" style="gap: 12px; display: grid;">
+      <div class="card" style="flex: 1; min-width: 0; background: rgba(255,255,255,0.1); border: 1px solid var(--prugio-gold); color: #fff; padding: 20px 10px;">
+        <h3 style="color: var(--prugio-gold); font-size: 1.1rem; margin-bottom: 10px;">짝꿍공구할인</h3>
+        <p style="font-size: 0.8rem; line-height: 1.6;">
           2인: 500원 / 3인: 1000원<br>
           7인: 1500원 / <strong>10인: 2000원</strong><br>
-          (장당 할인 혜택)
+          <span style="font-size: 0.7rem; opacity: 0.8;">(장당 할인 혜택)</span>
         </p>
       </div>
-      <div class="card" style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.1); border: none; color: #fff; padding: 15px;">
-        <h3 style="color: var(--prugio-gold); font-size: 1rem;">후기/셀프 할인</h3>
-        <p style="font-size: 0.85rem;">후기 2곳: -1,000원<br><strong>셀프 시공: -4,000원</strong></p>
+      <div class="card" style="flex: 1; min-width: 0; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 20px 10px;">
+        <h3 style="color: var(--prugio-gold); font-size: 1.1rem; margin-bottom: 10px;">후기/셀프 할인</h3>
+        <p style="font-size: 0.8rem; line-height: 1.6;">후기 2곳: -1,000원<br><strong>셀프 시공: -4,000원</strong></p>
       </div>
-      <div class="card" style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.1); border: none; color: #fff; padding: 15px;">
-        <h3 style="color: var(--prugio-gold); font-size: 1rem;">특별 할인</h3>
-        <p style="font-size: 0.85rem;">리퍼/전시: -2,000원<br>우대고객: -500원<br><small>(다자녀/한부모/장애인 등)</small><br><span style="font-size: 0.7rem; opacity: 0.7;">*짝꿍할인은 우대고객과 중복되지 않습니다.</span></p>
+      <div class="card" style="flex: 1; min-width: 0; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 20px 10px;">
+        <h3 style="color: var(--prugio-gold); font-size: 1.1rem; margin-bottom: 10px;">특별 할인</h3>
+        <p style="font-size: 0.8rem; line-height: 1.6;">리퍼/전시: -2,000원<br>우대고객: -500원<br><small>(다자녀/한부모/장애인 등)</small></p>
       </div>
-      <div class="card" style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.1); border: none; color: #fff; padding: 15px;">
-        <h3 style="color: var(--prugio-gold); font-size: 1rem;">맞춤 시공비</h3>
-        <p style="font-size: 0.85rem;">70장 이상 <strong>무료 시공</strong><br>
-          <span style="font-size: 0.75rem; opacity: 0.8;">40장 미만: +20만원<br>
+      <div class="card" style="flex: 1; min-width: 0; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 20px 10px;">
+        <h3 style="color: var(--prugio-gold); font-size: 1.1rem; margin-bottom: 10px;">맞춤 시공비</h3>
+        <p style="font-size: 0.8rem; line-height: 1.6;">70장 이상 <strong>무료 시공</strong><br>
+          <span style="font-size: 0.7rem; opacity: 0.8;">40장 미만: +20만원<br>
           69장 이하: +10만원</span>
         </p>
       </div>
+    </div>
+  </section>
+
+  <!-- Brochure Slider Section -->
+  <section id="about" class="section" style="background-color: #f9f9f9;">
+    <div class="section-title">
+      <h2>✨ 하늘매트란? (프리미엄 갤러리)</h2>
+      <p>좌우로 밀거나 화살표를 눌러서 하늘매트의 특장점과 브로셔를 확인하세요</p>
+    </div>
+    
+    <div class="swiper brochure-swiper" style="max-width: 800px; margin: 0 auto; padding-bottom: 50px; position: relative;">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/KakaoTalk_20260102_094256682.png" alt="브로셔01" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; cursor: pointer;"></div>
+        <div class="swiper-slide"><img src="images/KakaoTalk_20260102_094256682_02.png" alt="브로셔02" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; cursor: pointer;"></div>
+        <div class="swiper-slide"><img src="images/KakaoTalk_20260102_094256682_03.png" alt="브로셔03" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; cursor: pointer;"></div>
+        <div class="swiper-slide"><img src="images/KakaoTalk_20260102_094256682_04.png" alt="브로셔04" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; cursor: pointer;"></div>
+        <div class="swiper-slide"><img src="images/KakaoTalk_20260102_094256682_05.png" alt="브로셔05" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; cursor: pointer;"></div>
+        <div class="swiper-slide"><img src="images/KakaoTalk_20260102_094256682_06.png" alt="브로셔06" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; cursor: pointer;"></div>
+        <div class="swiper-slide"><img src="images/KakaoTalk_20260102_094256682_07.png" alt="브로셔07" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; cursor: pointer;"></div>
+        <div class="swiper-slide"><img src="images/KakaoTalk_20260102_094256682_08.png" alt="브로셔08" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; cursor: pointer;"></div>
+        <div class="swiper-slide"><img src="images/KakaoTalk_20260102_094256682_09.png" alt="브로셔09" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; cursor: pointer;"></div>
+        <div class="swiper-slide"><img src="images/KakaoTalk_20260102_094256682_10.png" alt="브로셔10" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; cursor: pointer;"></div>
+        <div class="swiper-slide"><img src="images/KakaoTalk_20260102_094256682_11.png" alt="브로셔11" onclick="openLightbox(this.src, this.alt)" style="width:100%; border-radius: 15px; cursor: pointer;"></div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next" style="color: var(--prugio-green);"></div>
+      <div class="swiper-button-prev" style="color: var(--prugio-green);"></div>
     </div>
   </section>
 
@@ -688,10 +1088,13 @@
 
     // --- Calculator Logic ---
     const qtyData = {
-      "59A": { "living": 30, "living_hall": 50, "total": 70 },
-      "79A": { "living": 40, "living_hall": 70, "total": 105 },
-      "79C": { "living": 45, "living_hall": 75, "total": 105 },
-      "84A": { "living": 45, "living_hall": 75, "total": 105 }
+      "59A": { "living": 30, "living_hall": 50, "living_kitchen": 45, "total": 70, "room1": 25, "room2": 20, "room3": 22 },
+      "59B": { "living": 45, "living_hall": 85, "living_kitchen": 65, "total": 85, "room1": 28, "room2": 22, "room3": 26 },
+      "59C": { "living": 35, "living_hall": 60, "living_kitchen": 50, "total": 75, "room1": 30, "room2": 21, "room3": 24 },
+      "79A": { "living": 40, "living_hall": 70, "living_kitchen": 60, "total": 105, "room1": 35, "room2": 28, "room3": 30 },
+      "79C": { "living": 45, "living_hall": 75, "living_kitchen": 65, "total": 105, "room1": 35, "room2": 30, "room3": 28 },
+      "79E": { "living": 50, "living_hall": 95, "living_kitchen": 70, "total": 115, "room1": 33, "room2": 24, "room3": 27 },
+      "84A": { "living": 45, "living_hall": 75, "living_kitchen": 65, "total": 105, "room1": 33, "room2": 29, "room3": 25, "room4": 25 }
     };
 
     const sizeRatios = {
@@ -730,8 +1133,9 @@
       }
 
       const baseTotal = finalQty * basePricePerMat;
-      const discountTotal = finalQty * 3000;
-      const finalTotal = baseTotal - discountTotal + constructionFee;
+      const friendDiscountTotal = finalQty * 2000;
+      const reviewDiscountTotal = finalQty * 1000;
+      const finalTotal = baseTotal - friendDiscountTotal - reviewDiscountTotal + constructionFee;
 
       document.getElementById('res-qty').textContent = finalQty;
       
@@ -750,9 +1154,13 @@
           <span>기본 공구 총액</span>
           <span>${baseTotal.toLocaleString()}원</span>
         </div>
-        <div style="display:flex; justify-content: space-between; margin-bottom: 8px; color: #e74c3c;">
-          <span>특별 중복 할인 (짝꿍+후기현금)</span>
-          <span>-${discountTotal.toLocaleString()}원</span>
+        <div style="display:flex; justify-content: space-between; margin-bottom: 8px; color: #e67e22;">
+          <span>└ 짝꿍 할인 (10인↑ / -2,000)</span>
+          <span>-${friendDiscountTotal.toLocaleString()}원</span>
+        </div>
+        <div style="display:flex; justify-content: space-between; margin-bottom: 8px; color: #e67e22;">
+          <span>└ 후기 할인 (현금지원 / -1,000)</span>
+          <span>-${reviewDiscountTotal.toLocaleString()}원</span>
         </div>
         <div style="display:flex; justify-content: space-between; margin-bottom: 8px; color: ${constructionFee > 0 ? '#e67e22' : '#27ae60'};">
           <span>추가 시공비 (${finalQty}장 기준)</span>
@@ -763,6 +1171,16 @@
           <span>${finalTotal.toLocaleString()}원</span>
         </div>
       `;
+    }
+
+    // --- Mobile Menu ---
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      nav.classList.toggle('active');
+    }
+    function closeMenu() {
+      const nav = document.getElementById('nav');
+      nav.classList.remove('active');
     }
 
     // Run on load
@@ -826,7 +1244,203 @@
     transform: scale(1.02);
     box-shadow: 0 8px 30px rgba(0,0,0,0.2);
   }
+
+  /* 3D Mat Reveal Animation */
+  .sketch-compare-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #fdfdfd;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    perspective: 1200px;
+  }
+  .sketch-layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(15deg) rotateZ(0deg);
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    transition: all 0.8s ease;
+  }
+  .base-structure {
+    z-index: 1;
+    opacity: 0.3;
+    filter: grayscale(1) blur(1px);
+  }
+  .mat-overlay {
+    z-index: 2;
+    clip-path: inset(0 100% 0 0);
+    animation: revealMatWipe 5s ease-in-out infinite alternate;
+  }
+  @keyframes revealMatWipe {
+    0%, 15% { clip-path: inset(0 100% 0 0); }
+    85%, 100% { clip-path: inset(0 0 0 0); }
+  }
+  .sketch-compare-container:hover .mat-overlay {
+    animation-play-state: paused;
+    clip-path: inset(0 0 0 0);
+  }
+  .sketch-compare-container:hover .sketch-layer {
+    transform: translate(-50%, -50%) rotateX(0deg);
+    opacity: 1;
+  }
+  /* Floating Action Buttons */
+  .fab-container {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+  }
+  .fab {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+    text-decoration: none;
+  }
+  .fab:hover {
+    transform: scale(1.1);
+  }
+  .fab-kakao {
+    background-color: #FEE500;
+    color: #3c1e1e;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .fab-sample {
+    background-color: var(--prugio-green);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .fab-music {
+    background-color: var(--prugio-green);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .music-icon {
+    font-size: 20px;
+    display: inline-block;
+  }
+  .fab.playing .music-icon {
+    animation: rotateIcon 4s linear infinite;
+  }
+  @keyframes rotateIcon {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Mobile Optimization */
+  @media (max-width: 768px) {
+    #hero-main-title { font-size: 2.2rem; }
+    #hero-sub-title { font-size: 1rem; }
+    .section { padding: 50px 20px; }
+    .section-title h2 { font-size: 1.8rem; }
+    
+    /* Notice Table Mobile Fix */
+    .urgent-notice div table { font-size: 0.7rem; min-width: 450px; }
+    .urgent-notice div table th, .urgent-notice div table td { padding: 8px 4px; }
+    .urgent-notice span { font-size: 1rem !important; }
+
+    /* Calculator Mobile Fix */
+    .calculator-container { padding: 30px 20px; border-radius: 20px; }
+    .size-selector-row { grid-template-columns: repeat(3, 1fr) !important; gap: 5px !important; }
+    .size-btn { font-size: 0.8rem; padding: 10px 5px; height: 65px; }
+    .calc-result { padding: 20px; }
+    .final-total-row { font-size: 1.2rem; }
+
+    /* Estimate Table Mobile Fix */
+    .estimate-grid { grid-template-columns: 1fr; }
+    .price-container table { font-size: 0.8rem; }
+    .price-container table th, .price-container table td { padding: 10px 5px; }
+    .sketch-compare-container { height: 200px; }
+
+    /* Floating Buttons Mobile Fix */
+    .fab { width: 50px; height: 50px; }
+    .music-icon { font-size: 18px; }
+
+    /* Benefit Grid Mobile */
+    .benefit-grid { grid-template-columns: 1fr !important; }
+  }
+
+  /* Desktop Grid */
+  @media (min-width: 769px) {
+    .benefit-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  }
+  /* AutoCAD Style Grid Simulation */
+  .cad-grid-simulation {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f4f8;
+    background-image: 
+      linear-gradient(rgba(0,100,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,100,255,0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    border: 1px solid #ced4da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .mat-grid-lines {
+    width: 80%;
+    height: 70%;
+    border: 2px solid #333;
+    background-image: 
+      repeating-linear-gradient(0deg, #ccc 0, #ccc 1px, transparent 1px, transparent 40px),
+      repeating-linear-gradient(90deg, #ccc 0, #ccc 1px, transparent 1px, transparent 40px);
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  .cad-label {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 0.7rem;
+    color: #004433;
+    font-family: 'Courier New', Courier, monospace;
+    background: rgba(255,255,255,0.8);
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
   </style>
+
+  <!-- Floating Buttons -->
+  <div class="fab-container">
+    <a href="http://pf.kakao.com/_RxfuxdG" target="_blank" class="fab fab-kakao" title="카카오톡 실시간 상담">
+      카톡<br>상담
+    </a>
+    <a href="https://smartstore.naver.com/cleanonecare/products/9639437677" target="_blank" class="fab fab-sample" title="샘플 신청">
+      샘플<br>신청
+    </a>
+    <button id="music-toggle" class="fab fab-music" onclick="toggleMusic()" title="배경음악 토글">
+      <span id="music-icon-text" class="music-icon">▶️</span>
+    </button>
+  </div>
+
+  <audio id="bg-audio" loop>
+    <source src="Warm Ivory Echo.mp3" type="audio/mpeg">
+  </audio>
 
   <!-- Lightbox Modal -->
   <div id="lightbox" onclick="closeLightbox()">
@@ -834,6 +1448,7 @@
     <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     function openLightbox(src, alt) {
       const lb = document.getElementById('lightbox');
@@ -847,6 +1462,60 @@
       document.body.style.overflow = '';
     }
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    // Initialize Swiper
+    const swiper = new Swiper('.brochure-swiper', {
+      loop: false,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      grabCursor: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 1,
+        }
+      }
+    });
+
+    // Music Toggle Logic
+    const bgAudio = document.getElementById('bg-audio');
+    const musicBtn = document.getElementById('music-toggle');
+    const musicIcon = document.getElementById('music-icon-text');
+    let isPlaying = false;
+
+    function toggleMusic() {
+      if (!isPlaying) {
+        bgAudio.play().then(() => {
+          musicBtn.classList.add('playing');
+          musicIcon.textContent = '⏸️';
+          isPlaying = true;
+        }).catch(err => {
+          console.log("자동재생 차단됨. 사용자의 클릭이 필요합니다.");
+        });
+      } else {
+        bgAudio.pause();
+        musicBtn.classList.remove('playing');
+        musicIcon.textContent = '▶️';
+        isPlaying = false;
+      }
+    }
+
+    // Try autoplay on first interaction
+    document.addEventListener('click', () => {
+      if (!isPlaying) {
+        toggleMusic();
+      }
+    }, { once: true });
   </script>
 </body>
 </html>
