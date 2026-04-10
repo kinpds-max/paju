@@ -338,13 +338,23 @@ table tr th:last-child, table tr td:last-child {
   transform-origin: center center;
 }
 
+.plan-details {
+  text-align: center;
+}
+
+.plan-details .badge {
+  display: inline-block;
+  margin: 0 auto 15px auto;
+}
+
 .plan-details h4 {
   font-size: 1.8rem;
   color: var(--prugio-green);
-  margin-bottom: 25px;
+  margin: 0 auto 25px auto;
   border-bottom: 2px solid var(--prugio-gold);
   display: inline-block;
   padding-bottom: 5px;
+  text-align: center;
 }
 
 .mat-count-list {
