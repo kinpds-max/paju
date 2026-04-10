@@ -730,3 +730,61 @@ footer {
     font-size: 0.65rem;
   }
 }
+/* Pricing Tables Mobile Overhaul */
+.mobile-optimized-pricing {
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  border: 2px solid #ffcfcf;
+  margin: 20px auto;
+  overflow-x: auto;
+  max-width: 950px;
+  box-shadow: 0 10px 30px rgba(231, 76, 60, 0.08);
+}
+
+@media (max-width: 768px) {
+  .mobile-optimized-pricing {
+    padding: 15px;
+    overflow-x: hidden;
+  }
+  
+  #price-increase-table {
+    min-width: 100% !important;
+    display: block;
+  }
+  
+  #price-increase-table thead {
+    display: none;
+  }
+  
+  #price-increase-table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  #price-increase-table tr {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "label label"
+      "base group";
+    background: #fff;
+    border: 1px solid #ffcfcf;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 0;
+  }
+
+  /* This logic is hard to do with current HTML structure without JS or complex CSS. 
+     I will use a simpler stacking for 'At a glance' */
+  
+  .price-container table {
+    min-width: 100%;
+  }
+  
+  .price-container th, .price-container td {
+    padding: 10px 4px;
+    font-size: 0.72rem;
+  }
+}
