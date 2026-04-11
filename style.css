@@ -279,12 +279,18 @@ table tr th:last-child, table tr td:last-child {
 
 .estimate-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 40px;
+  grid-template-columns: 1.1fr 1fr; /* Adjusted for better balance */
+  gap: 30px;
   background: #fff;
   padding: 40px;
   border-radius: 25px;
   box-shadow: var(--shadow-md);
+  align-items: center; /* Vertical center */
+}
+
+.plan-details {
+  text-align: left; /* Aligned left for side-by-side mode */
+  min-width: 0;
 }
 
 .plan-visuals {
@@ -338,9 +344,6 @@ table tr th:last-child, table tr td:last-child {
   transform-origin: center center;
 }
 
-.plan-details {
-  text-align: center;
-}
 
 .plan-details .badge {
   display: inline-block;
