@@ -895,13 +895,13 @@
       const effectivePricePerMat = basePricePerMat - 3000;
       
       let constructionFee = 0;
-      let feeNote = "면제(70장 이상)";
-      if (finalQty < 40) {
+      let feeNote = "면제 (70장 이상)";
+      if (baseQty < 40) {
         constructionFee = 200000;
-        feeNote = "+200,000원";
-      } else if (finalQty < 70) {
+        feeNote = "+200,000원 (600기준 40장 미만)";
+      } else if (baseQty < 70) {
         constructionFee = 100000;
-        feeNote = "+100,000원";
+        feeNote = "+100,000원 (600기준 40~69장)";
       }
 
       const baseTotal = finalQty * basePricePerMat;
