@@ -40,7 +40,58 @@
       <div class="urgent-notice" style="margin-bottom: 40px; text-align: center;">
         <span style="color: #e74c3c; font-weight: 800; display: block; margin-bottom: 15px; font-size: 1.25rem;">🔥 전쟁여파 원자재 상승으로 부득이하게<br>이번공구외 인상예정입니다</span>
         
-        <div class="mobile-optimized-pricing">
+        <div class="mobile-price-cards">
+          <!-- 600각 -->
+          <div class="price-card">
+            <div class="card-header">600각 (오리지널)</div>
+            <div class="card-body">
+              <div class="price-row"><span>인상 전(공구)</span><strong>2.6만</strong></div>
+              <div class="price-row highlight"><span>인상 후(예정)</span><strong>3만</strong></div>
+            </div>
+          </div>
+          <!-- 600레더 -->
+          <div class="price-card">
+            <div class="card-header">600레더 (신제품)</div>
+            <div class="card-body">
+              <div class="price-row"><span>인상 전(공구)</span><strong>3.0만</strong></div>
+              <div class="price-row highlight"><span>인상 후(예정)</span><strong>3.4만</strong></div>
+            </div>
+          </div>
+          <!-- 800각 -->
+          <div class="price-card">
+            <div class="card-header">800각 (BEST)</div>
+            <div class="card-body">
+              <div class="price-row"><span>인상 전(공구)</span><strong>4.9만</strong></div>
+              <div class="price-row highlight"><span>인상 후(예정)</span><strong>8.3만</strong></div>
+            </div>
+          </div>
+          <!-- 800레더 -->
+          <div class="price-card">
+            <div class="card-header">800레더</div>
+            <div class="card-body">
+              <div class="price-row"><span>인상 전(공구)</span><strong>6.2만</strong></div>
+              <div class="price-row highlight"><span>인상 후(예정)</span><strong>9.3만</strong></div>
+            </div>
+          </div>
+          <!-- 1000각 -->
+          <div class="price-card">
+            <div class="card-header">1000레더 (PREMIUM)</div>
+            <div class="card-body">
+              <div class="price-row"><span>인상 전(공구)</span><strong>9.9만</strong></div>
+              <div class="price-row highlight"><span>인상 후(예정)</span><strong>13.5만</strong></div>
+            </div>
+          </div>
+          <!-- 1200각 -->
+          <div class="price-card">
+            <div class="card-header">1200레더 (KING)</div>
+            <div class="card-body">
+              <div class="price-row"><span>인상 전(공구)</span><strong>15만</strong></div>
+              <div class="price-row highlight"><span>인상 후(예정)</span><strong>20만</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pc-only-pricing">
           <table id="price-increase-table" style="width: 100%; border-collapse: collapse; font-size: 0.95rem; text-align: center; min-width: 600px;">
             <thead>
               <tr style="background: #004433; color: #ffffff;">
@@ -74,6 +125,7 @@
               </tr>
             </tbody>
           </table>
+        </div>
           <p style="font-size: 0.85rem; color: #999; margin-top: 15px; font-style: italic;">* 이번 공동구매 종료 후 전국적으로 적용될 인상 예정안입니다.</p>
         </div>
       </div>
@@ -92,7 +144,7 @@
               <th style="text-align: center;">기초 단가</th>
               <th style="text-align: center;">공동구매가</th>
               <th style="background: #b08e50; text-align: center;">10인↑ 짝꿍 (-2,000)</th>
-              <th style="background: #b08e50; text-align: center;">후기현금 (-1,000)</th>
+              <th style="background: #b08e50; text-align: center;">후기 2곳 현금 (-1,000)</th>
               <th style="background: #9a7b41; text-align: center;">최대 혜택가</th>
             </tr>
           </thead>
@@ -152,9 +204,8 @@
         <p style="font-size: 0.95rem; line-height: 1.8;">
           <strong>💡 할인 산정 기준:</strong><br>
           • <strong>공동구매가:</strong> 입주민 기본 할인 적용 가격<br>
-          • <strong>최대 혜택가 (10인 이상 짝꿍 진행):</strong> 공구가 - [짝꿍 10인동시 (2,000) + 후기현금 1,000] <strong>특별 동시적용 시</strong><br>
-          • <strong>안내:</strong> 짝꿍(10인 기준 2천원) 및 후기할인(1천원)은 강력한 중복 혜택으로 제공됩니다.<br>
-          <span style="color: #e67e22;">• <strong>중복 불가:</strong> 본 짝꿍 이벤트와 기타 우대 혜택(다자녀/한부모/장애인 등)은 중복 적용이 되지 않습니다.</span>
+          • <strong>최대 혜택가 (10인 이상 짝꿍 진행):</strong> 공구가 - [짝꿍 10인동시 (2,000) + 후기 2곳 현금 1,000] <strong>특별 동시적용 시</strong><br>
+          • <strong>안내:</strong> 짝꿍(10인 기준 2천원) 및 후기 2곳 현금(1천원)은 강력한 중복 혜택으로 제공됩니다.<br>
         </p>
       </div>
     </div>
@@ -882,11 +933,11 @@
       </div>
       <div class="card" style="flex: 1; min-width: 0; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 20px 10px;">
         <h3 style="color: var(--prugio-gold); font-size: 1.1rem; margin-bottom: 10px;">후기/셀프 할인</h3>
-        <p style="font-size: 0.8rem; line-height: 1.6;">후기 2곳: -1,000원<br><strong>셀프 시공: -4,000원</strong></p>
+        <p style="font-size: 0.8rem; line-height: 1.6;">후기 2곳 현금: -1,000원<br><strong>셀프 시공: -4,000원</strong></p>
       </div>
       <div class="card" style="flex: 1; min-width: 0; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 20px 10px;">
         <h3 style="color: var(--prugio-gold); font-size: 1.1rem; margin-bottom: 10px;">특별 할인</h3>
-        <p style="font-size: 0.8rem; line-height: 1.6;">리퍼/전시: -2,000원<br>우대고객: -500원<br><small>(다자녀/한부모/장애인 등)</small></p>
+        <p style="font-size: 0.8rem; line-height: 1.6;">리퍼/전시: -2,000원</p>
       </div>
       <div class="card" style="flex: 1; min-width: 0; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 20px 10px;">
         <h3 style="color: var(--prugio-gold); font-size: 1.1rem; margin-bottom: 10px;">맞춤 시공비</h3>
@@ -1090,7 +1141,7 @@
           <span>-${friendDiscountTotal.toLocaleString()}원</span>
         </div>
         <div style="display:flex; justify-content: space-between; margin-bottom: 8px; color: #e67e22;">
-          <span>└ 후기 할인 (현금지원 / -1,000)</span>
+          <span>└ 후기 2곳 현금 (-1,000)</span>
           <span>-${reviewDiscountTotal.toLocaleString()}원</span>
         </div>
         <div style="display:flex; justify-content: space-between; margin-bottom: 8px; color: ${constructionFee > 0 ? '#e67e22' : '#27ae60'};">

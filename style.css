@@ -740,61 +740,83 @@ footer {
     font-size: 0.65rem;
   }
 }
-/* Pricing Tables Mobile Overhaul */
-.mobile-optimized-pricing {
+/* Pricing Tables Premium Tone & Manner (Screenshot Sync) */
+.pc-only-pricing { display: block; }
+.mobile-price-cards { display: none; }
+
+.price-container {
   background: #fff;
-  padding: 25px;
-  border-radius: 20px;
-  border: 2px solid #ffcfcf;
-  margin: 20px auto;
-  overflow-x: auto;
-  max-width: 950px;
-  box-shadow: 0 10px 30px rgba(231, 76, 60, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08); /* PC screenshot shadow */
+  border: 1px solid rgba(0,0,0,0.05);
+  margin-bottom: 15px;
 }
 
 @media (max-width: 768px) {
-  .mobile-optimized-pricing {
-    padding: 15px;
-    overflow-x: hidden;
+  .pc-only-pricing { display: none; }
+  .mobile-price-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
   }
   
-  #price-increase-table {
-    min-width: 100% !important;
-    display: block;
-  }
-  
-  #price-increase-table thead {
-    display: none;
-  }
-  
-  #price-increase-table tbody {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  #price-increase-table tr {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-      "label label"
-      "base group";
+  .price-card {
     background: #fff;
-    border: 1px solid #ffcfcf;
-    border-radius: 15px;
-    padding: 10px;
-    margin-bottom: 0;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+  }
+  
+  .card-header {
+    background: #004433; /* Dark Prugio Green */
+    color: #fff;
+    padding: 10px 5px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  
+  .card-body {
+    padding: 12px 10px;
+    background: #fff;
+  }
+  
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.65rem;
+    margin-bottom: 8px;
+    color: #666;
+  }
+  
+  .price-row:last-child { margin-bottom: 0; }
+  
+  .price-row strong {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  /* Scheduled Price highlighting (Red in screenshot) */
+  .price-row.highlight {
+    color: #e74c3c;
+    border-top: 1px solid #f8f8f8;
+    padding-top: 8px;
+    margin-top: 4px;
+  }
+  
+  .price-row.highlight strong {
+    color: #e74c3c;
+    font-size: 1.05rem;
+    font-weight: 800;
   }
 
-  /* This logic is hard to do with current HTML structure without JS or complex CSS. 
-     I will use a simpler stacking for 'At a glance' */
-  
-  .price-container table {
-    min-width: 100%;
-  }
-  
-  .price-container th, .price-container td {
-    padding: 10px 4px;
-    font-size: 0.72rem;
-  }
+  .price-container table { font-size: 0.7rem; }
+  .price-container th, .price-container td { padding: 12px 2px; }
+  .price-container th { background: #004433 !important; color: #fff !important; font-weight: 700; }
 }
