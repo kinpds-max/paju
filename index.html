@@ -22,6 +22,7 @@
         <li><a href="#usage-guide" onclick="closeMenu()">주의사항</a></li>
         <li><a href="#textures" onclick="closeMenu()">제품 라인업</a></li>
         <li><a href="#benefits" onclick="closeMenu()">공구혜택</a></li>
+        <li><a href="#apply" onclick="closeMenu()" style="color: var(--prugio-gold); font-weight: 700;">공구신청</a></li>
       </ul>
     </nav>
   </header>
@@ -229,6 +230,7 @@
             <option value="59B">59B 타입</option>
             <option value="59C">59C 타입</option>
             <option value="79A">79A 타입</option>
+            <option value="79B">79B 타입</option>
             <option value="79C">79C 타입</option>
             <option value="79E">79E 타입</option>
             <option value="84A">84A 타입</option>
@@ -292,6 +294,7 @@
         <button class="tab-btn" onclick="openTab(event, 'type59B')">59B</button>
         <button class="tab-btn" onclick="openTab(event, 'type59C')">59C</button>
         <button class="tab-btn" onclick="openTab(event, 'type79A')">79A</button>
+        <button class="tab-btn" onclick="openTab(event, 'type79B')">79B</button>
         <button class="tab-btn" onclick="openTab(event, 'type79C')">79C</button>
         <button class="tab-btn" onclick="openTab(event, 'type79E')">79E</button>
         <button class="tab-btn" onclick="openTab(event, 'type84A')">84A</button>
@@ -380,86 +383,6 @@
               <span class="visual-label">단지 평면도</span>
               <img src="images/59C.png" alt="59C 평면도">
             </div>
-            </div>
-          </div>
-          <div class="plan-details">
-            <span class="badge">Compact Living</span>
-            <h4>59C 타입 예상 수량</h4>
-            <div class="price-container">
-              <table style="font-size: 0.9rem;">
-                <thead>
-                  <tr>
-                    <th>시공 구역</th>
-                    <th>600각</th>
-                    <th>800각</th>
-                    <th>1000각</th>
-                    <th>1200각</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>거실</td>
-                    <td>35장</td>
-                    <td>20장</td>
-                    <td>13장</td>
-                    <td>9장</td>
-                  </tr>
-                  <tr>
-                    <td>주방</td>
-                    <td>20장</td>
-                    <td>12장</td>
-                    <td>8장</td>
-                    <td>5장</td>
-                  </tr>
-                  <tr>
-                    <td>거실+복도</td>
-                    <td>60장</td>
-                    <td>34장</td>
-                    <td>22장</td>
-                    <td>15장</td>
-                  </tr>
-                  <tr class="highlight-row">
-                    <td><strong>거+주+복도(전체)</strong></td>
-                    <td><strong>75장</strong></td>
-                    <td><strong>42장</strong></td>
-                    <td><strong>27장</strong></td>
-                    <td><strong>19장</strong></td>
-                  </tr>
-                  <tr>
-                    <td>침실1(안방)</td>
-                    <td>30장</td>
-                    <td>17장</td>
-                    <td>11장</td>
-                    <td>8장</td>
-                  </tr>
-                  <tr>
-                    <td>침실2</td>
-                    <td>21장</td>
-                    <td>12장</td>
-                    <td>8장</td>
-                    <td>6장</td>
-                  </tr>
-                  <tr>
-                    <td>침실3</td>
-                    <td>24장</td>
-                    <td>14장</td>
-                    <td>9장</td>
-                    <td>6장</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 59C -->
-      <div id="type59C" class="tab-content">
-        <div class="estimate-grid">
-          <div class="plan-visuals">
-            <div class="plan-image cropped">
-              <span class="visual-label">단지 평면도</span>
-              <img src="images/59C.png" alt="59C 평면도">
-            </div>
           </div>
           <div class="plan-details">
             <span class="badge">Compact Living</span>
@@ -506,6 +429,37 @@
                   <tr class="highlight-row"><td><strong>거+복+주방</strong></td><td><strong>110장</strong></td><td><strong>62장</strong></td><td><strong>40장</strong></td><td><strong>28장</strong></td></tr>
                   <tr><td>침실1(안방)</td><td>35장</td><td>20장</td><td>13장</td><td>9장</td></tr>
                   <tr><td>침실2</td><td>28장</td><td>16장</td><td>10장</td><td>7장</td></tr>
+                  <tr><td>침실3</td><td>30장</td><td>17장</td><td>11장</td><td>8장</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 79B -->
+      <div id="type79B" class="tab-content">
+        <div class="estimate-grid">
+          <div class="plan-visuals">
+            <div class="plan-image cropped">
+              <span class="visual-label">2D 평면도</span>
+              <img src="images/79B.png" alt="79B 평면도">
+            </div>
+          </div>
+          <div class="plan-details">
+            <span class="badge">Spacious Living</span>
+            <h4>79B 타입 예상 수량</h4>
+            <div class="price-container">
+              <table style="font-size: 0.9rem;">
+                <thead>
+                  <tr><th>시공 구역</th><th>600각</th><th>800각</th><th>1000각</th><th>1200각</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>거실</td><td>60장</td><td>34장</td><td>22장</td><td>15장</td></tr>
+                  <tr><td>거실+복도</td><td>85장</td><td>48장</td><td>31장</td><td>22장</td></tr>
+                  <tr class="highlight-row"><td><strong>전체(거+복+주)</strong></td><td><strong>110장</strong></td><td><strong>62장</strong></td><td><strong>40장</strong></td><td><strong>28장</strong></td></tr>
+                  <tr><td>침실1(안방)</td><td>35장</td><td>20장</td><td>13장</td><td>9장</td></tr>
+                  <tr><td>침실2</td><td>30장</td><td>17장</td><td>11장</td><td>8장</td></tr>
                   <tr><td>침실3</td><td>30장</td><td>17장</td><td>11장</td><td>8장</td></tr>
                 </tbody>
               </table>
@@ -768,6 +722,30 @@
     </div>
   </section>
 
+  <!-- Apply Section -->
+  <section id="apply" class="section" style="background-color: #fff; text-align: center; border-top: 1px solid #eee;">
+    <div class="section-title">
+      <h2>공동구매 지금 바로 신청하세요</h2>
+      <p>한정 기간 제공되는 특별 혜택을 놓치지 마세요.</p>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto; padding: 40px; background: var(--bg-light); border-radius: 30px; box-shadow: var(--shadow-md); border: 2px solid var(--prugio-gold);">
+      <h3 style="color: var(--prugio-green); font-size: 1.8rem; margin-bottom: 20px;">파주 푸르지오 더스마트<br>공동구매 공식 접수처</h3>
+      <p style="font-size: 1.1rem; color: #555; margin-bottom: 35px; line-height: 1.8;">
+        아래 버튼을 클릭하여 신청서를 작성해 주시면<br>
+        전문 상담원이 순차적으로 해피콜을 드립니다.
+      </p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfgVdxH9Jz7n5m-LgpPy1LAV7-uUmtaIsCVq019wZEKICnlaw/viewform?usp=preview" target="_blank" class="btn-primary" style="display: inline-block; padding: 20px 60px; font-size: 1.3rem; background: var(--prugio-green);">
+        공동구매 신청하기 (클릭)
+      </a>
+      <p style="margin-top: 25px; font-size: 0.95rem; color: #e74c3c; font-weight: 700;">
+        ⚠️ 계약금은 위약금 성격으로 절대 환불이 불가합니다.
+      </p>
+      <p style="margin-top: 10px; font-size: 0.85rem; color: #888;">
+        * 개인정보는 상담 목적으로만 사용되며 안전하게 보호됩니다.
+      </p>
+    </div>
+  </section>
+
   <footer style="background: #2c3e50; color: #fff; padding: 60px 20px; text-align: center;">
     <div style="margin-bottom: 20px;">
       <p style="font-size: 1.2rem; font-weight: 700; color: var(--prugio-gold);">하늘매트 1877-2008 (문자가능)</p>
@@ -864,6 +842,7 @@
       "59B": { "living": 45, "living_hall": 85, "living_kitchen": 65, "total": 85, "room1": 28, "room2": 22, "room3": 26 },
       "59C": { "living": 35, "living_hall": 60, "living_kitchen": 50, "total": 75, "room1": 30, "room2": 21, "room3": 24 },
       "79A": { "living": 40, "living_hall": 70, "living_kitchen": 60, "total": 105, "room1": 35, "room2": 28, "room3": 30 },
+      "79B": { "living": 60, "living_hall": 85, "living_kitchen": 85, "total": 110, "room1": 35, "room2": 30, "room3": 30 },
       "79C": { "living": 45, "living_hall": 75, "living_kitchen": 65, "total": 105, "room1": 35, "room2": 30, "room3": 28 },
       "79E": { "living": 50, "living_hall": 95, "living_kitchen": 70, "total": 115, "room1": 33, "room2": 24, "room3": 27 },
       "84A": { "living": 45, "living_hall": 75, "living_kitchen": 65, "total": 105, "room1": 33, "room2": 29, "room3": 25, "room4": 25 }
@@ -1044,6 +1023,15 @@
   .fab:hover {
     transform: scale(1.1);
   }
+  .fab-apply {
+    background-color: var(--prugio-gold);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
   .fab-kakao {
     background-color: #FEE500;
     color: #3c1e1e;
@@ -1120,6 +1108,9 @@
 
   <!-- Floating Buttons -->
   <div class="fab-container">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfgVdxH9Jz7n5m-LgpPy1LAV7-uUmtaIsCVq019wZEKICnlaw/viewform?usp=preview" target="_blank" class="fab fab-apply" title="공동구매 신청하기">
+      공구<br>신청
+    </a>
     <a href="http://pf.kakao.com/_RxfuxdG" target="_blank" class="fab fab-kakao" title="카카오톡 실시간 상담">
       카톡<br>상담
     </a>
