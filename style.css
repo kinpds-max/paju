@@ -758,11 +758,11 @@ footer {
 
 @media (max-width: 768px) {
   .pc-only-pricing { display: none; }
+  .mobile-price-table-container {
+    display: block !important;
+  }
   .mobile-price-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    margin-bottom: 20px;
+    display: none;
   }
   
   .price-card {
