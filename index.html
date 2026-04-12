@@ -184,12 +184,12 @@
               <td style="font-weight: 700; color: var(--prugio-green); text-align: center;">92,000원</td>
             </tr>
             <tr>
-              <td style="text-align: center;"><strong>1200 mm <span class="badge" style="background:#2c3e50; margin:0;">KING</span></strong></td>
+              <td style="text-align: center;"><strong>1200 mm <span class="badge" style="background:#2c3e50; margin:0;">LEATHER</span></strong></td>
               <td style="text-align: center;">200,000원</td>
               <td style="text-align: center;">150,000원</td>
-              <td style="text-align: center; color: #e67e22;">-2,000원</td>
+              <td style="text-align: center; color: #e67e22;">-9,000원</td>
               <td style="text-align: center; color: #e67e22;">-1,000원</td>
-              <td style="font-weight: 700; color: var(--prugio-green); text-align: center;">147,000원</td>
+              <td style="font-weight: 700; color: var(--prugio-green); text-align: center;">140,000원</td>
             </tr>
           </tbody>
         </table>
@@ -198,8 +198,8 @@
         <p style="font-size: 0.95rem; line-height: 1.8;">
           <strong>💡 할인 산정 기준:</strong><br>
           • <strong>공동구매가:</strong> 입주민 기본 할인 적용 가격<br>
-          • <strong>최대 혜택가 (10인 이상 짝꿍 진행):</strong> 공구가 - [짝꿍 10인동시 (2,000) + 후기 2곳 현금 1,000] <strong>특별 동시적용 시</strong><br>
-          • <strong>안내:</strong> 짝꿍(10인 기준 2천원) 및 후기 2곳 현금(1천원)은 강력한 중복 혜택으로 제공됩니다.<br>
+          • <strong>최대 혜택가 (10인 이상 짝꿍 진행):</strong> 공구가 - [짝꿍 10인동시 (2,000~9,000) + 후기 2곳 현금 1,000] <strong>특별 동시적용 시</strong><br>
+          • <strong>안내:</strong> 짝꿍(10인 기준 2천원~9천원 선) 및 후기 2곳 현금(1천원)은 강력한 중복 혜택으로 제공됩니다.<br>
         </p>
       </div>
     </div>
@@ -864,7 +864,8 @@
       let finalQty = Math.ceil(baseQty * sizeRatios[selectedSize]);
       
       const basePricePerMat = selectedPrice;
-      const effectivePricePerMat = basePricePerMat - 3000;
+      const friendDiscountPerMat = (selectedSize === "1200L") ? 9000 : 2000;
+      const effectivePricePerMat = basePricePerMat - friendDiscountPerMat - 1000;
       
       let constructionFee = 0;
       let feeNote = "면제 (70장 이상)";
@@ -877,7 +878,7 @@
       }
 
       const baseTotal = finalQty * basePricePerMat;
-      const friendDiscountTotal = finalQty * 2000;
+      const friendDiscountTotal = finalQty * friendDiscountPerMat;
       const reviewDiscountTotal = finalQty * 1000;
       const finalTotal = baseTotal - friendDiscountTotal - reviewDiscountTotal + constructionFee;
 
@@ -899,7 +900,7 @@
           <span>${baseTotal.toLocaleString()}원</span>
         </div>
         <div style="display:flex; justify-content: space-between; margin-bottom: 8px; color: #e67e22;">
-          <span>└ 짝꿍 할인 (10인↑ / -2,000)</span>
+          <span>└ 짝꿍 할인 (10인↑ / -${friendDiscountPerMat.toLocaleString()})</span>
           <span>-${friendDiscountTotal.toLocaleString()}원</span>
         </div>
         <div style="display:flex; justify-content: space-between; margin-bottom: 8px; color: #e67e22;">
